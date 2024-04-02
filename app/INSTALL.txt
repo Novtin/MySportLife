@@ -1,0 +1,7 @@
+Для компиляции проекта нужно ввести в терминале, находясь в корневой папке:
+
+./gradlew assembleRelease
+
+Собранный apk-файл будет храниться в
+
+/MyDish/app/build/outputs/apk/release/app-release-unsigned.apk

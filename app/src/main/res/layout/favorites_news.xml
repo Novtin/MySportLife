@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/miniNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePage">
+        <LinearLayout
+            android:id="@+id/page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/upButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/newsUpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/for_buttons"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/news"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:textStyle="italic"
+                    android:onClick="goToFavoritesNews"/>
+
+                <Button
+                    android:id="@+id/recipesUpButton"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/inter_extralight"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:background="@drawable/stroke_corners"
+                    android:text="@string/recipes"
+                    android:textAllCaps="false"
+                    android:layout_margin="8sp"
+                    android:textStyle="italic"
+                    android:onClick="goToFavoritesRecipes"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/miniNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7sp"
+                android:background="@drawable/stroke_corners"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/miniNews"
+                app:layout_constraintTop_toBottomOf="@+id/miniNews"
+                android:onClick="goToNew">
+
+                <TextView
+                    android:id="@+id/titleMiniNews"
+                    android:layout_width="366dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/test_title_news"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textMiniNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+                    android:text="@string/test_small_text_news"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/favoritesMiniNewsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/favorites"
+                    android:src="@mipmap/favorites_mini"
+                    android:onClick="makeUnmakeFavorite"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/titlePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/inter_extralight"
+            android:text="@string/favorites"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+    <include layout="@layout/control_panel"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

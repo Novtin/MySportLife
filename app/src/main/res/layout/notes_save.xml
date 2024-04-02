@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/controlPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePage">
+
+        <LinearLayout
+            android:id="@+id/miniNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlePage">
+
+        <LinearLayout
+            android:id="@+id/nameFood"
+            android:layout_width="match_parent"
+            android:layout_margin="7sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_corners"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7sp"
+                android:fontFamily="@font/inter"
+                android:gravity="center_horizontal"
+                android:text="@string/name_food"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/name_food_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:layout_marginEnd="10sp"
+                android:maxLength="10"/>
+
+
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/protein"
+                android:layout_width="match_parent"
+                android:layout_margin="7sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_corners"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7sp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_horizontal"
+                    android:text="@string/protein"
+                    android:textSize="25sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/protein_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:layout_marginEnd="10sp"
+                    android:maxLength="4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fat"
+                android:layout_width="match_parent"
+                android:layout_margin="7sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_corners"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7sp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_horizontal"
+                    android:text="@string/fat"
+                    android:textSize="25sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/fat_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10sp"
+                    android:inputType="numberDecimal"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:maxLength="4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/carbon"
+                android:layout_width="match_parent"
+                android:layout_margin="7sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_corners"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7sp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_horizontal"
+                    android:text="@string/carbon"
+                    android:textSize="25sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/carbon_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:layout_marginEnd="10sp"
+                    android:maxLength="4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kilo"
+                android:layout_width="match_parent"
+                android:layout_margin="7sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_corners"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7sp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_horizontal"
+                    android:text="@string/kilo"
+                    android:textSize="25sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/kilo_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_marginEnd="10sp"
+                    android:maxLength="5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gram"
+                android:layout_width="match_parent"
+                android:layout_margin="7sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_corners"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7sp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_horizontal"
+                    android:text="@string/gram"
+                    android:textSize="25sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/gram_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_marginEnd="10sp"
+                    android:maxLength="5"/>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/newsUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="8sp"
+                android:layout_weight="1"
+                android:background="@drawable/for_buttons"
+                android:text="@string/save_note"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:onClick="saveNote"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/titlePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/back"
+            android:src="@mipmap/back"
+            android:onClick="goBack"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/inter_extralight"
+            android:text="@string/diary"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <include layout="@layout/control_panel"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

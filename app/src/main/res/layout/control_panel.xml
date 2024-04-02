@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/controlPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/stroke"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/map_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/map"
+            android:src="@mipmap/map"
+            android:onClick="goToMap"/>
+
+        <ImageButton
+            android:id="@+id/recipes_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/recipes"
+            android:src="@mipmap/recipes"
+            android:onClick="goToRecipes"/>
+
+        <ImageButton
+            android:id="@+id/news_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/news"
+            android:src="@mipmap/news"
+            android:onClick="goToNews"/>
+
+        <ImageButton
+            android:id="@+id/notes_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/add_note"
+            android:src="@mipmap/notes"
+            android:onClick="goToNotes"/>
+
+        <!--<ImageButton
+            android:id="@+id/favorites_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/favorites"
+            android:layout_weight="1"
+            android:src="@mipmap/favorites"
+            android:onClick="goToFavoritesNews"/>-->
+
+</LinearLayout>
